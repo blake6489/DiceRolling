@@ -8,6 +8,7 @@ $|++;
 print "Type how many dice the attacker, and the defender will roll and press enter.  If **more** apears, press enter again until you are satisfied, type 'q' to end the dice rolling turn. \n";
 print "> ";
 while (my $line = <STDIN>) {
+	#magic regexp to parse input of force strengths
     my ($attack, $defend) = grep defined, $line =~ m/^ (?:
         (\d)(\d) | (\d+)\W+(\d+)
     ) $/x;
