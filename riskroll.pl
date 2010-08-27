@@ -5,6 +5,13 @@ use strict;
 use List::MoreUtils qw/zip/;
 $|++;
 
+
+#Which player goes frst?
+print "Enter the number of players:";
+my $players = <STDIN>;
+my $player = int 1 + rand $players;
+print "Player number $player\n";
+
 print "Type how many dice the attacker, and the defender will roll and press enter.  If **more** apears, press enter again until you are satisfied, type 'q' to end the dice rolling turn. \n";
 print "> ";
 while (my $line = <STDIN>) {
